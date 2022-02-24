@@ -17,6 +17,8 @@ Run the program
 python3 main.py "<restaurant name>"
 # to se the list of SiO restaurants run 
 python3 main.py -l
+# to get help use the command
+python3 main.py -h
 ```
 
 ## Demo:
@@ -28,10 +30,10 @@ The script is written in python using `BeautifulSoup`.
 2. Using BeautifulSoup the each div containing a restaurant is found.
 3. Name of restaurant, menu headings and menu is found for each restaurant
 4. The result is added to a 2d dictionary. The structure is described below
-5. Commands get information from the 2d dictinary 
+5. An argparser is used to parse the user-query
 
 *result dictionary structure*
-```python
+```json
 {
   "restaurant_1" : {"title_1" : "text_1", "title_2": "text_2"},
   "restaurant_2" : {"title_3": "text_3"},
