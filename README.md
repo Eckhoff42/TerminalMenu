@@ -22,7 +22,7 @@ python3 main.py -h
 ```
 
 ## Demo:
-
+[![asciicast](https://asciinema.org/a/88oVkPmHu09XairqPRvdveRtw.svg)](https://asciinema.org/a/88oVkPmHu09XairqPRvdveRtw)
 
 ## implementation
 The script is written in python using `BeautifulSoup`.
