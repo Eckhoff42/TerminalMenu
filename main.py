@@ -62,14 +62,14 @@ def get_menus(url):
 
 
 def printRestaurants(res):
-    print("|    Name   |    Menu    |")
-    print("|    ****   |    ****    |")
+    print(f'|{"Name": <48}|{"Menu": <11}|')
+    print(f'|{"****": <48}|{"****": <11}|')
     for title in res.keys():
         hasMenu = colored("No menu", 'red')
         if (res[title] != {}):
             hasMenu = colored("Found menu", "blue")
 
-        print("|", title, "|", hasMenu, "|")
+        print(f'|{title: <48}|{hasMenu: <20}|')
 
 
 def printMenu(title, menu):
