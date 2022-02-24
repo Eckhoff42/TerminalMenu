@@ -37,6 +37,6 @@ The script is written in python using `BeautifulSoup`.
 {
   "restaurant_1" : {"title_1" : "text_1", "title_2": "text_2"},
   "restaurant_2" : {"title_3": "text_3"},
-  "restaurant_3" : {} #this restaurant has no menu
+  "restaurant_3" : {} //this restaurant has no menu
 }
 ```
