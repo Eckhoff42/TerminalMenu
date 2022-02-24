@@ -22,7 +22,8 @@ python3 main.py -h
 ```
 
 ## Demo:
-[![asciicast](https://asciinema.org/a/88oVkPmHu09XairqPRvdveRtw.svg)](https://asciinema.org/a/88oVkPmHu09XairqPRvdveRtw)
+![render1645720353083](https://user-images.githubusercontent.com/42439472/155567163-a8628809-e0ca-4458-b526-212046b9be75.gif)
+
 
 ## implementation
 The script is written in python using `BeautifulSoup`.
