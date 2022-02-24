@@ -6,10 +6,10 @@ import re
 
 
 def get_menu_from_restaurant(place):
-  # dictinary of heading and contents
+    # dictinary of heading and contents
     menu_book = {}
 
-   # find the title of the restaurant
+    # find the title of the restaurant
     header = place.find("div", {"class": "panel-heading tableview"})
     title_span = header.find("span", {"class": "maintitle"})
     title = re.findall(r'<.*?\>(.+)<\/span>', str(title_span))[0]
@@ -23,21 +23,13 @@ def get_menu_from_restaurant(place):
     # find heading
     headers = menu_div.findAll("h4")
     header_titles = []
-    for h in headers:
-        header_titles.append(re.findall(r'\<h4\>(.+)?\<\/h4\>', str(h))[0])
-    # header_titles = map(lambda x: print("x er", x) and
-    #                     re.findall(r'\<h4\>(.+)?\<\/h4\>', str(x))[0], headers)
+    header_titles = list(map(lambda x: re.findall(
+        r'\<h4\>(.+)?\<\/h4\>', str(x))[0], headers))
 
     # find content
     menus = menu_div.find_all("ul")
-    menu_titles = []
-    for m in menus:
-        m_title = re.findall(r'<li>(.+?)\<\/li\>', str(m))[0]
-        menu_titles.append(m_title)
-
-    # TODO: convert to map
-    # menu_titles = map(re.findall(r'<li>(.+?)\<\/li\>',
-    #                   str(menus[0])), list(menus))
+    menu_titles = list(map(lambda x: re.findall(
+        r'<li>(.+?)\<\/li\>', str(x))[0], menus))
 
     # add combination of heading and contents to menu_book
     for pair in zip(header_titles, menu_titles):
